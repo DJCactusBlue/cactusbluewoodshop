@@ -186,7 +186,7 @@ Side Tab Navigation
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.next, .prev {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -208,7 +208,7 @@ Side Tab Navigation
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.next:hover, .prev:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
