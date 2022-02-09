@@ -62,12 +62,6 @@ header {
   grid-template-rows: auto auto auto;
 }
 
-.grid-container-middle-about {
-  display: grid;
-  grid-template-columns: 1fr minmax(80px, 420px) minmax(80px, 460px) 1fr;
-  grid-template-rows: auto auto auto auto;
-}
-
 .whitespace {
   background-color: white;
   padding: 2rem 0;
