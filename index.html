@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sandbox 2</title>
-  <meta charset="UTF-">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" type="text/css" href="styles_woodshop_main.css">
   <script src="name.js" defer></script>
+  <title>Sandbox 2</title>
 </head>
 
 <body>
 
-  <div class="container-underneath">
+  <div class="container-underneath"> <!--Add a white background container beneath container-->
 
+  <!--Header includes banner, overlapping primary navigation menu, and project title-->
   <header>
     <div class="banner">
-      <img src="Banner Cactus Blue Woodshop.png" class="object1" alt="Webpage banner" >
+      <img src="Banner Cactus Blue Woodshop.png" class="round-top-corners-20px" alt="Webpage banner" >
     </div>
     
-    <div class="navbar">
+    <nav class="navbar"> <!--Primary navigation menu-->
       <a class="active" href="index.html">Woodshop</a>
       <a href="About.html">About</a>
       <a href="https://www.djcactusblue.com">Music</a> 
-    </div>
+    </nav>
     
-    <section class="project-title">
+    <section class="project-title"> <!--Project title-->
       <h1>Cactus Blue Woodshop Projects</h1>
     </section>
   </header>
 
+  <!--Middle of page container contains sidebar navigation, slideshow, description, whitespace, and footer-->
   <div class="grid-container-middle">
-    <input type="checkbox" id="side-toggle" class="side-toggle">
+    <input type="checkbox" id="side-toggle" class="side-toggle"> <!--used to create responsive hamburger menu-->
 
-    <div class="sidebar">
+    <nav class="sidebar"> <!--Sidebar navigation links-->
       <a class="active" href="index.html">Pens & Pencils</a>
       <a href="Bottle_Stopper.html">Bottle Stoppers</a>
       <a href="Corner_Hutch">Corner Hutch</a>
@@ -46,9 +48,9 @@
       <a href="Toy_Box">Toy Box</a>
       <a href="Early_Projects">Early Projects</a>
       <a href="The_Woodshop">The Woodshop</a>
-    </div> 
+    </nav> 
 
-    <label for="side-toggle" class="side-toggle-label">
+    <label for="side-toggle" class="side-toggle-label"> <!--Replaces checkbox for toggle of menu-->
       <span></span>
     </label>
 
@@ -57,87 +59,65 @@
       <!-- Full-width images with number and caption text -->
       <div class="mySlides">
         <div class="numbertext">1 / 14</div>
-        <img src="Pens_Pencils/Executive_Rollerball1.jpeg" style="width:100%">
-        <div class="text">Executive Rollerball</div>
+        <img src="Pens_Pencils/Executive_Rollerball1.jpeg">
+        <figcaption>Executive Rollerball</figcaption>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">2 / 14</div>
-        <img src="Pens_Pencils/Executive_Rollerball2.jpeg" style="width:100%">
-        <div class="text">Executive Rollerball</div>
+        <img src="Pens_Pencils/Executive_Rollerball2.jpeg">
+        <figcaption>Executive Rollerball</figcaption>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">3 / 14</div>
-        <img src="Pens_Pencils/Executive_Rollerball3.jpeg" style="width:100%">
-        <div class="text">Executive Rollerball</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">4 / 14</div>
-        <img src="Pens_Pencils/Executive_Rollerball4.JPG" style="width:100%">
-        <div class="text">Executive Rollerball</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">5 / 14</div>
-        <img src="Pens_Pencils/Executive_Rollerball5.JPG" style="width:100%">
-        <div class="text">Executive Rollerball</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">6 / 14</div>
-        <img src="Pens_Pencils/Executive_Rollerball6.JPG" style="width:100%">
-        <div class="text">Executive Rollerball</div>
+        <img src="Pens_Pencils/Executive_Rollerball3.jpeg">
+        <figcaption>Executive Rollerball</figcaption>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">7 / 14</div>
-        <img src="Pens_Pencils/Executive_Fountain_Magnetic1.jpeg" style="width:100%">
-        <div class="text">Executive Fountain</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">8 / 14</div>
-        <img src="Pens_Pencils/Executive_Fountain_Magnetic2.jpeg" style="width:100%">
-        <div class="text">Executive Fountain</div>
+        <img src="Pens_Pencils/Executive_Fountain_Magnetic1.jpeg">
+        <figcaption>Executive Fountain</figcaption>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">9 / 14</div>
-        <img src="Pens_Pencils/Executive_Fountain_Magnetic3.jpeg" style="width:100%">
-        <div class="text">Executive Fountain</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">10 / 14</div>
-        <img src="Pens_Pencils/Wall_Street_II.jpg" style="width:100%">
-        <div class="text">Wall Street II</div>
+        <img src="Pens_Pencils/Executive_Fountain_Magnetic3.jpeg">
+        <figcaption>Executive Fountain</figcaption>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">11 / 14</div>
-        <img src="Pens_Pencils/Wall_Street_III.jpg" style="width:100%">
-        <div class="text">Wall Street III</div>
+        <img src="Pens_Pencils/Wall_Street_III.jpg">
+        <figcaption>Wall Street II & III</figcaption>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">12 / 14</div>
-        <img src="Pens_Pencils/Euro_Style.jpg" style="width:100%">
-        <div class="text">Euro Style</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">13 / 14</div>
-        <img src="Pens_Pencils/Slim_Style_Pens.jpg" style="width:100%">
-        <div class="text">Slim Style</div>
+        <img src="Pens_Pencils/Euro_Style1.jpg">
+        <figcaption>Euro Style</figcaption>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">14 / 14</div>
-        <img src="Pens_Pencils/Pens1.jpg" style="width:100%">
-        <div class="text">Variety</div>
+        <img src="Pens_Pencils/Euro_Style2.jpg">
+        <figcaption>Euro Style</figcaption>
       </div>
+
+      <div class="mySlides">
+        <div class="numbertext">14 / 14</div>
+        <img src="Pens_Pencils/Euro_Style3.jpg">
+        <figcaption>Euro Style</figcaption>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">13 / 14</div>
+        <img src="Pens_Pencils/Slim_Style_Pens.jpg">
+        <figcaption>Slim Style</figcaption>
+      </div>
+
+      
 
       <!-- Next and previous arrows -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -162,16 +142,19 @@
       </div>
     </figure>
 
+    <!--Descriptive text on right side of images-->
     <section class="text-next-image">
     <h2>Pens & Pencils</h2>
       <p>Text describing images goes here. Text describing images goes here. Text describing images goes here. Text describing images goes here. Text describing images goes here. </p>
     </section>
 
+    <!--Whitespace before the footer-->
     <div class="whitespace">
     </div>
 
+    <!--Footer-->
     <footer class="footer">
-      <p>Footer</p>
+      <p>© 2022 Cactus Blue Woodshop. All Rights Reserved</p>
     </footer>
 
   </div>
