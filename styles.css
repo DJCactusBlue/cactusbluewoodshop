@@ -1,0 +1,531 @@
+/**
+* my method
+* *this is comment
+* ! this means something
+* TODO something
+* ? another thing
+*/
+
+/** Global styles **/
+
+:root {
+  --primary-clr: rgb(36, 59, 55);
+  --bar-clr: rgb(224,224,224);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+body {
+  background: #316154;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+.container-underneath{
+  width: 100%;
+  max-width: 1080px;
+  margin-top: 0;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 20px; 
+  background-color: white;
+  display: grid;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr minmax(340px, 1080px) 1fr;
+  grid-template-rows: auto auto;
+}
+
+.grid-container-middle {
+  display: grid;
+  grid-template-columns: 1fr 200px minmax(80px, 420px) minmax(80px, 460px) 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+.grid-container-middle-about {
+  display: grid;
+  grid-template-columns: 1fr minmax(80px, 420px) minmax(80px, 460px) 1fr;
+  grid-template-rows: auto auto auto auto;
+}
+
+.whitespace {
+  background-color: white;
+  padding: 2rem 0;
+
+  display: grid;
+  grid-column: 2/5;
+  grid-row: 3/4;
+}
+
+footer{
+  background-color: var(--primary-clr);
+  color: var(--bar-clr);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1.4rem 0;
+  border-radius: 0px 0px 20px 20px;
+
+  display: grid;
+  grid-column: 2/5;
+  grid-row: 4/5;
+}
+
+.object1 {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.banner {
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.project-title {
+  color: #7f583b;
+  padding: 1.8rem;
+
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+/*********************
+/** Top Navigation **/
+/********************/
+/* Style the navigation menu */
+.navbar {
+  background-color: rgba(224,224,224,.7);
+  text-align: center;
+  height: 42px;
+
+  display: flex; 
+  justify-content: space-around; 
+  grid-column: 2/3;
+  grid-row: 1/2;
+  z-index: 10;
+  align-self: end; /* Navigation bar to bottom of grid cell */
+}
+
+/* Navigation links */
+.navbar a {
+  align-content: center;
+  color: var(--primary-clr);
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: var(--primary-clr);
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+/* Add a top bar on mouse-over */
+.navbar a:hover::before {
+  transform: scale(1,1);
+}
+
+/* Style the current/active link */
+.navbar a.active {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: var(--primary-clr);
+}
+
+/******************
+/** Side Navigation
+/*******************/
+/* The side navigation menu */
+
+.side-toggle {
+  display: none;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  
+  height: auto;
+  background-color: var(--bar-clr);
+  border-radius: 0px 10px 10px 0px;
+  overflow: auto;
+
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: grid;
+  color: var(--primary-clr);
+  font-size: 1.6rem;
+  text-decoration: none;
+
+  place-items: center stretch;
+  padding-left: 1.2rem;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: rgba(36, 59, 55, .5);
+  transition: background-color ease-in-out 350ms;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  color: white;
+  background-color: var(--primary-clr);
+}
+
+/***********
+Slideshow 
+***********/
+/* Slideshow container */
+figure {
+  background-color: white;
+  position: relative;
+  margin: 1.2rem;
+  
+  display: grid;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+img {
+  border-radius: 10px 10px 0 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -32px;
+  padding: 1.2rem;
+  color: white;
+  background-color: rgba(36, 59, 55, 0.2);
+  font-weight: bold;
+
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.next:hover, .prev:hover {
+  background-color: rgba(36, 59, 55, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  background-color: var(--primary-clr);
+  font-size: 1.8rem;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  background-color: rgba(36, 59, 55, 0.3);
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  border-radius: 10px 0 10px 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  bottom: -20px;
+  position: relative;
+  text-align: center;;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.text-next-image {
+  display: grid;
+  grid-column: 4/5;
+  grid-row: 1/2;
+
+  font-size: 1.8rem;
+  align-self: start;
+}
+
+/*********************
+/*! Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/*********************/
+@media (max-width: 700px) {
+
+  html {
+    font-size: 55%;
+  }
+
+  /****************************
+  /** Top Navigation Menu small
+  /****************************/
+  .navbar {   
+    flex-direction: column;
+    position: relative;
+    top: 58px;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    align-content: center;
+    color: var(--primary-clr);
+    background: var(--bar-clr);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    
+    padding: 5px 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+
+  .navbar a::before {
+    display: none;
+  }
+
+  /* Turn off previous top bar on mouse-over */
+  .navbar a:hover::before {
+    display: none;
+  }
+  
+  /* Add a top bar on mouse-over */
+  .navbar a:hover {
+    background-color: rgba(113, 95, 88, .5);
+    padding: 5px 0;
+  }
+  
+  /* Style the current/active link */
+  .navbar a.active {
+    background-color: var(--primary-clr);
+    color: rgba(224,224,224,1);
+    height: 38px;
+  }
+
+  /** Change middle grid container to have one center column **/
+  .grid-container-middle {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+
+  .project-title {
+    color: #7f583b;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    top: 4rem;
+  
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  /************************
+  /** Side Navigation small
+  /************************/
+  /* The side navigation menu */
+  .side-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+  
+  .side-toggle:focus ~ .side-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+  }
+
+  .side-toggle-label {
+    position: relative;
+    top: 0;
+    height: 32px;
+    background: gray;
+    padding-top: 8px;
+    padding-left: 1.6rem;
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .side-toggle-label span,
+  .side-toggle-label span::before,
+  .side-toggle-label span::after {
+    display: block;
+    background: var(--primary-clr);
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative; 
+  }
+
+  .side-toggle-label span::before,
+  .side-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+
+  .side-toggle-label span::before {
+    top: 7px;
+  }
+
+  .side-toggle-label span::after {
+    top: 14px;
+  }
+
+  /**todo fix sidebar position (it is partially covering hamburger **/
+  .sidebar {
+    /* margin: 0; */
+    /* padding: 0; */
+    margin-top: 32px;
+    height: auto;
+    background-color: var(--bar-clr);
+    border-radius: 0px;
+    /* overflow: auto; */
+
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    /* grid-column: 2/3;
+    grid-row: 1/2; */
+  }
+
+  /* Sidebar links */
+  .sidebar a {
+    display: grid;
+    color: var(--primary-clr);
+    font-size: 1.6rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    padding-left: 1.6rem;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: rgba(36, 59, 55, .5);
+    transition: background-color ease-in-out 350ms;
+  }
+
+  .side-toggle:checked ~ .sidebar {
+    transform: scale(1,1);
+  }
+
+  .side-toggle:checked ~ .sidebar a {
+    opacity: 1;
+    position: relative;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+
+  /* Active/current link */
+  .sidebar a.active {
+    color: white;
+    background-color: var(--primary-clr);
+  }
+
+  /******************
+  /** Slideshow small
+  /******************/
+  /* Slideshow container */
+  figure {
+    background-color: white;
+    position: relative;
+    margin: 1.2rem;
+    
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .text-next-image {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  
+    font-size: 1.8rem;
+    align-self: start;
+  }
+
+  /** Resize whitespace for one column **/
+  .whitespace {
+    background-color: white;
+    padding: 2rem 0;
+  
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  
+  /** Resize footer for one column **/
+  footer{
+    background-color: var(--primary-clr);
+    color: var(--bar-clr);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.4rem 0;
+    border-radius: 0px 0px 20px 20px;
+  
+    display: grid;
+    grid-column: 2/3;
+    grid-row:5/6;
+  }
+}
