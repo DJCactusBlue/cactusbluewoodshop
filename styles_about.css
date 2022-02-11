@@ -233,41 +233,4 @@ img {
   grid-row: 3/4;
 }
 
-/************************
-/** Responsive layout **/
-/***********************/
-@media (max-width: 850px) {
-  html {
-    font-size: 52.5%;
-  }
 
-  /*********************************
-  /** Top Navigation under 850px **/
-  /********************************/
-  /* Style the navigation menu */
-  .navbar {
-    background-color: rgba(224,224,224,.7);
-    text-align: center;
-    height: 30px;
-
-    display: flex; 
-    justify-content: space-around; 
-    grid-column: 2/3;
-    grid-row: 1/2;
-    z-index: 10;
-    align-self: end; /* Navigation bar to bottom of grid cell */
-  }
-
-  /* Navigation links */
-  .navbar a {
-    align-content: center;
-    color: var(--primary-clr);
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: bold;
-    line-height: 1.2;
-  }
-}
-
-
-}
