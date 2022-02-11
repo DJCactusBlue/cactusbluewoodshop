@@ -321,46 +321,4 @@ img {
     color: rgba(224,224,224,1);
     height: 38px;
   }
-
-  /* Change middle grid container to have one center column */
-  .grid-container-middle {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto auto auto auto;
-  }
-
-  /* Adjust project title spacing */
-  .project-title {
-    color: #7f583b;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    text-align: center;
-    position: relative;
-    top: 4rem;
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  
-  /* Resize whitespace for one column */
-  .whitespace {
-    background-color: white;
-    padding: 2rem 0;
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 4/5;
-  }
-
-  /* Resize footer for one column */
-  footer{
-    background-color: var(--primary-clr);
-    color: var(--bar-clr);
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 1.4rem 0;
-    border-radius: 0px 0px 20px 20px;
-    display: grid;
-    grid-column: 2/3;
-    grid-row:5/6;
-  }
 }
