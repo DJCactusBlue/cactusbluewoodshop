@@ -269,56 +269,5 @@ img {
   }
 }
 
-/* when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 650px) {
-/* Smaller font size */
-  html {
-    font-size: 52.5%;
-  }
 
-  /**************************************
-  /** Top Navigation Menu under 650px **/
-  /*************************************/
-  .navbar {   
-    flex-direction: column;
-    position: relative;
-    top: 56px;
-  }
-  
-  /* Navigation links */
-  .navbar a {
-    align-content: center;
-    color: var(--primary-clr);
-    background: var(--bar-clr);
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: 1.4;
-    padding: 5px 0;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-  }
-
-  /* Turn off the ease effects */
-  .navbar a::before {
-    display: none;
-  }
-
-  /* Turn off previous top bar on mouse-over */
-  .navbar a:hover::before {
-    display: none;
-  }
-  
-  /* Add a top bar on mouse-over */
-  .navbar a:hover {
-    background-color: rgba(113, 95, 88, .5);
-    padding: 5px 0;
-  }
-  
-  /* Style the current/active link */
-  .navbar a.active {
-    background-color: var(--primary-clr);
-    color: rgba(224,224,224,1);
-    height: 38px;
-  }
 }
