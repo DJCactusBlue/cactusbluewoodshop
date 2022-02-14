@@ -67,13 +67,12 @@ header {
   display: grid;
   grid-template-columns: 1fr minmax(170px, 540px) minmax(170px, 540px) 1fr;
   grid-template-rows: auto auto auto;
-  column-gap: 1.8em;
 }
 
 /* Set-up the bottom container's grid number of columns and rows and sizes */
 .grid-container-bottom {
   display: grid;
-  grid-template-columns: 1fr minmax(340px, 1080px) 1fr;
+  grid-template-columns: 1fr minmax(270px, 730px) minmax(70px, 350px) 1fr;
   grid-template-rows: auto auto;
 }
 
@@ -82,30 +81,43 @@ header {
   background-color: white;
   padding: 2rem 0;
   display: grid;
-  grid-column: 2/3;
+  grid-column: 2/4;
   grid-row: 1/2;
 }
 
+.social-icon-size {
+  width: 2em;
+}
+
+.footer-social-icons {
+  margin-right: 0;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  grid-column: 3/4;
+  grid-row: 4/5;
+  z-index: 10;
+}
+
 /* Set-up the footer's grid placement and other properties*/
-footer{
+.footer-copyright {
   background-color: var(--primary-clr);
   color: var(--bar-clr);
   font-size: 1.5rem;
-  text-align: center;
-  padding: 1.4rem 0;
+  text-align: left;
+  padding: 1.8rem;
   border-radius: 0px 0px 20px 20px;
   display: grid;
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-/* Set image properties */
-img {
-  width: 100%;
+  grid-column: 2/4;
+  grid-row: 4/5;
 }
 
 /* Set the banner image properties */
 .round-top-corners-20px {
+  display: block;
+  width: 100%;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -133,7 +145,6 @@ img {
   background-color: rgba(224,224,224,.7);
   text-align: center;
   height: 42px;
-
   display: flex; 
   justify-content: space-around; 
   grid-column: 2/3;
@@ -180,7 +191,8 @@ img {
 .about-title1 {
   justify-self: center;
   align-self: start;
-  margin: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
   display: grid;
   grid-column: 2/3;
   grid-row: 1/2;
@@ -189,25 +201,26 @@ img {
 .about-title2 {
   justify-self: center;
   align-self: end;
-  margin: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
   display: grid;
   grid-column: 3/4;
   grid-row: 1/2;
 }
 
 .about-image1 {
-  justify-self: start;
+  justify-self: center;
   border-radius: 20px;
-  width: 100%;
+  width: 70%;
   display: grid;
   grid-column: 2/3;
   grid-row: 2/3;
 }
 
 .about-image2 {
-  justify-self: end;
+  justify-self: center;
   border-radius: 20px;
-  width: 100%;
+  width: 70%;
   display: grid;
   grid-column: 3/4;
   grid-row: 2/3;
@@ -216,7 +229,7 @@ img {
 .about-text1 {
   justify-self: center;
   align-self: start;
-  margin: 1.6rem;
+  margin: 2rem;
   font-size: 1.6rem;
   display: grid;
   grid-column: 2/3;
@@ -226,11 +239,226 @@ img {
 .about-text2 {
   justify-self: center;
   align-self: start;
-  margin: 1.6rem;
+  margin: 2rem;
   font-size: 1.6rem;
   display: grid;
   grid-column: 3/4;
   grid-row: 3/4;
 }
 
+/************************
+/** Responsive layout **/
+/***********************/
+@media (max-width: 850px) {
+  html {
+    font-size: 52.5%;
+  }
 
+  /*********************************
+  /** Top Navigation under 850px **/
+  /********************************/
+  /* Style the navigation menu */
+  .navbar {
+    background-color: rgba(224,224,224,.7);
+    text-align: center;
+    height: 30px;
+
+    display: flex; 
+    justify-content: space-around; 
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 10;
+    align-self: end; /* Navigation bar to bottom of grid cell */
+  }
+
+  /* Navigation links */
+  .navbar a {
+    align-content: center;
+    color: var(--primary-clr);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+}
+
+/* when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 650px) {
+/* Smaller font size */
+  html {
+    font-size: 52.5%;
+  }
+
+  /**************************************
+  /** Top Navigation Menu under 650px **/
+  /*************************************/
+  .navbar {   
+    flex-direction: column;
+    position: relative;
+    top: 56px;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    align-content: center;
+    color: var(--primary-clr);
+    background: var(--bar-clr);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 5px 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+
+  /* Turn off the ease effects */
+  .navbar a::before {
+    display: none;
+  }
+
+  /* Turn off previous top bar on mouse-over */
+  .navbar a:hover::before {
+    display: none;
+  }
+  
+  /* Add a top bar on mouse-over */
+  .navbar a:hover {
+    background-color: rgba(113, 95, 88, .5);
+    padding: 5px 0;
+  }
+  
+  /* Style the current/active link */
+  .navbar a.active {
+    background-color: var(--primary-clr);
+    color: rgba(224,224,224,1);
+    height: 38px;
+  }
+
+  /* Change middle grid container to have one center column */
+  .grid-container-middle-about {
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+
+  /* Set-up the bottom container's grid number of columns and rows and sizes */
+  .grid-container-bottom {
+    display: grid;
+    grid-template-columns: 1fr minmax(340px, 1080px) 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  /* Adjust project title spacing */
+  .project-title {
+    color: #7f583b;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+    position: relative;
+    top: 4rem;
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  /*****************************
+  /** About Information small **
+  /****************************/
+  .about-title1 {
+    justify-self: center;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+    display: grid;
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+
+  .about-image1 {
+    justify-self: center;
+    top: 10em;
+    border-radius: 20px;
+    width: 75%;
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .about-text1 {
+    margin-top: 0;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .about-title2 {
+    justify-self: center;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+    display: grid;
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+
+  .about-image2 {
+    justify-self: center;
+    border-radius: 20px;
+    width: 70%;
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .about-text2 {
+    justify-self: center;
+    margin-top: 0;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+
+  /* Set-up the whitespace's grid placement and sizes */
+  .whitespace {
+    background-color: white;
+    padding: 2rem 0;
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .social-icon-size {
+    width: 2em;
+  }
+
+  .footer-social-icons {
+    background-color: var(--primary-clr);
+    color: var(--bar-clr);
+    font-size: 1.5rem;
+    margin-right: 0;
+    height: 50px;
+    padding-top: 20px;
+    align-self: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  /* Resize footer for one column */
+  .footer-copyright {
+    background-color: var(--primary-clr);
+    border-radius: 0px 0px 20px 20px;
+    color: var(--bar-clr);
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
