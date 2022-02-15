@@ -590,7 +590,7 @@ figcaption {
     background-color: var(--primary-clr);
     color: var(--bar-clr);
     margin-right: 0;
-    height: 50px;
+    height: 55px;
     padding-top: 20px;
     align-self: center;
     justify-content: space-evenly;
