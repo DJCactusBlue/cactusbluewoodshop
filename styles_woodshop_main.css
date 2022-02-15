@@ -590,14 +590,14 @@ figcaption {
     background-color: var(--primary-clr);
     color: var(--bar-clr);
     margin-right: 0;
-    height: 55px;
-    padding-top: 20px;
+    height: 50px;
+    padding-top: 15px;
     align-self: center;
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     grid-column: 2/3;
-    grid-row: 2/4;
+    grid-row: 2/3;
   }
 
   /* Resize footer for one column */
