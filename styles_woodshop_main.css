@@ -96,7 +96,7 @@ header {
 /* Set-up the bottom container's grid number of columns and rows and sizes */
 .grid-container-bottom {
   display: grid;
-  grid-template-columns: 1fr minmax(270px, 730px) minmax(70px, 350px) 1fr;
+  grid-template-columns: 1fr minmax(270px, 840px) minmax(70px, 240px) 1fr;
   grid-template-rows: auto auto;
 }
 
@@ -110,13 +110,13 @@ header {
 }
 
 .social-icon-size {
-  width: 2em;
+  width: 2.8rem;
 }
 
+/* Set social icons positions and spacing */
 .footer-social-icons {
-  margin-right: 0;
+  margin-right: 3rem;
   justify-content: space-around;
-  font-size: 1.5rem;
   align-self: center;
   display: flex;
   flex-direction: row;
@@ -131,7 +131,7 @@ header {
   color: var(--bar-clr);
   font-size: 1.5rem;
   text-align: left;
-  padding: 1.8rem;
+  padding: 1.2rem 0 1.2rem 5rem;
   border-radius: 0px 0px 20px 20px;
   display: grid;
   grid-column: 2/4;
@@ -582,13 +582,13 @@ figcaption {
   }
 
   .social-icon-size {
-    width: 2em;
+    width: 2.8rem;
   }
 
+  /* Resize footer for one column */
   .footer-social-icons {
     background-color: var(--primary-clr);
     color: var(--bar-clr);
-    font-size: 1.5rem;
     margin-right: 0;
     height: 50px;
     padding-top: 20px;
