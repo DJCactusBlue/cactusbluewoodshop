@@ -53,7 +53,7 @@ img {
 /* Set the container properties to be the correct size and shape and responsive */
 .body-container {
   max-width: 1080px;
-  margin: 2px auto;
+  margin: 2px 2px;
   height: auto;
   border-radius: 20px; 
   background-color: white;
@@ -144,7 +144,7 @@ header {
 }
 
 /*********************
-/** Top Navigation **/
+/** Top Navigation ***
 /********************/
 /* Style the navigation menu */
 .navbar {
@@ -253,15 +253,15 @@ header {
 }
 
 /************************
-/** Responsive layout **/
+/** Responsive layout ***
 /***********************/
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   html {
     font-size: 57.5%;
   }
 
   /*********************************
-  /** Top Navigation under 850px **/
+  /** Top Navigation under 900px ***
   /********************************/
   /* Style the navigation menu */
   .navbar {
@@ -282,7 +282,7 @@ header {
   }
 
   /**************************************
-  /** Top Navigation Menu under 650px **/
+  /** Top Navigation Menu under 650px ***
   /*************************************/
   .navbar {   
     flex-direction: column;
