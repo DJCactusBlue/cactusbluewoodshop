@@ -7,12 +7,13 @@
 */
 
 /********************
-/** Global styles **/
+/** Global styles ***
 /*******************/
 /* Color variables */
 :root {
   --primary-clr: rgb(36, 59, 55);
   --bar-clr: rgb(224,224,224);
+  --secondary-clr: rgb(243, 238, 105);
 }
 
 /* include the padding and border in an element's total width and height */
@@ -41,25 +42,52 @@ body {
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 1.6;
+  margin: 0;
 }
 
-/* Set the container underneath properties to be the correct shize and shape and responsive */
-.container-underneath{
-  width: 100%;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Set the container properties to be the correct size and shape and responsive */
+.body-container {
   max-width: 1080px;
-  margin-top: 0;
-  margin: 0 auto;
+  margin: 2px auto;
   height: auto;
   border-radius: 20px; 
   background-color: white;
-  display: grid;
+  margin-inline: auto;
 }
 
 /* Set-up the header's grid number of columns and rows and sizes */
 header {
   display: grid;
-  grid-template-columns: 1fr minmax(340px, 1080px) 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto;
+}
+
+/* Set the banner image properties */
+.round-top-corners-20px {
+  display: block;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* Set the banner grid placement */
+.banner {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+/* Set the project title placment and properties */
+.project-title {
+  color: #7f583b;
+  padding: 1.8rem;
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 2/3;
 }
 
 /* Set-up the middle container's grid number of columns and rows and sizes */
@@ -109,32 +137,10 @@ header {
   text-align: left;
   padding: 1.8rem;
   padding: 1.2rem 0 1.2rem 5rem;
+  border-radius: 0px 0px 20px 20px;
   display: grid;
   grid-column: 2/4;
   grid-row: 4/5;
-}
-
-/* Set the banner image properties */
-.round-top-corners-20px {
-  display: block;
-  width: 100%;
-  border-radius: 20px 20px 0px 0px;
-}
-
-/* Set the banner grid placement */
-.banner {
-  display: grid;
-  grid-column: 2/4;
-  grid-row: 1/2;
-}
-
-/* Set the project title placment and properties */
-.project-title {
-  color: #7f583b;
-  padding: 1.8rem;
-  display: grid;
-  grid-column: 2/4;
-  grid-row: 2/3;
 }
 
 /*********************
@@ -147,7 +153,7 @@ header {
   height: 42px;
   display: flex; 
   justify-content: space-around; 
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 1/2;
   z-index: 10;
   align-self: end; /* Navigation bar to bottom of grid cell */
@@ -251,7 +257,7 @@ header {
 /***********************/
 @media (max-width: 850px) {
   html {
-    font-size: 52.5%;
+    font-size: 57.5%;
   }
 
   /*********************************
@@ -259,25 +265,11 @@ header {
   /********************************/
   /* Style the navigation menu */
   .navbar {
-    background-color: rgba(224,224,224,.7);
-    text-align: center;
     height: 30px;
-
-    display: flex; 
-    justify-content: space-around; 
-    grid-column: 2/3;
-    grid-row: 1/2;
-    z-index: 10;
-    align-self: end; /* Navigation bar to bottom of grid cell */
   }
 
   /* Navigation links */
   .navbar a {
-    align-content: center;
-    color: var(--primary-clr);
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: bold;
     line-height: 1.2;
   }
 }
@@ -300,10 +292,7 @@ header {
   
   /* Navigation links */
   .navbar a {
-    align-content: center;
-    color: var(--primary-clr);
     background: var(--bar-clr);
-    text-decoration: none;
     font-size: 1.6rem;
     font-weight: bold;
     line-height: 1.4;
@@ -337,85 +326,63 @@ header {
 
   /* Change middle grid container to have one center column */
   .grid-container-middle-about {
-    display: grid;
     grid-template-columns: 1fr auto auto 1fr;
     grid-template-rows: auto auto auto auto auto auto;
   }
 
   /* Set-up the bottom container's grid number of columns and rows and sizes */
   .grid-container-bottom {
-    display: grid;
     grid-template-columns: 1fr minmax(340px, 1080px) 1fr;
     grid-template-rows: auto auto auto;
   }
 
   /* Adjust project title spacing */
   .project-title {
-    color: #7f583b;
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 4rem;
     text-align: center;
     position: relative;
     top: 4rem;
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 2/3;
+    grid-column: 1/2;
   }
 
   /*****************************
   /** About Information small **
   /****************************/
   .about-title1 {
-    justify-self: center;
-    margin-top: 0;
-    margin-bottom: 1.6rem;
-    display: grid;
     grid-column: 2/4;
-    grid-row: 1/2;
   }
 
   .about-image1 {
-    justify-self: center;
     top: 10em;
-    border-radius: 20px;
     width: 75%;
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 2/3;
   }
 
   .about-text1 {
     margin-top: 0;
     margin-left: 1rem;
-    font-size: 1.6rem;
     display: grid;
     grid-column: 3/4;
     grid-row: 2/3;
   }
 
   .about-title2 {
-    justify-self: center;
     margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
     display: grid;
     grid-column: 2/4;
     grid-row: 3/4;
   }
 
   .about-image2 {
-    justify-self: center;
-    border-radius: 20px;
-    width: 70%;
+    width: 75%;
     display: grid;
     grid-column: 2/3;
     grid-row: 4/5;
   }
 
   .about-text2 {
-    justify-self: center;
     margin-top: 0;
     margin-left: 1rem;
-    font-size: 1.6rem;
     display: grid;
     grid-column: 3/4;
     grid-row: 4/5;
@@ -423,11 +390,7 @@ header {
 
   /* Set-up the whitespace's grid placement and sizes */
   .whitespace {
-    background-color: white;
-    padding: 2rem 0;
-    display: grid;
     grid-column: 2/3;
-    grid-row: 1/2;
   }
 
   .social-icon-size {
@@ -438,7 +401,6 @@ header {
   .footer-social-icons {
     background-color: var(--primary-clr);
     color: var(--bar-clr);
-  
     margin-right: 0;
     height: 50px;
     padding-top: 20px;
@@ -452,10 +414,6 @@ header {
 
   /* Resize footer for one column */
   .footer-copyright {
-    background-color: var(--primary-clr);
-    border-radius: 0px 0px 20px 20px;
-    color: var(--bar-clr);
-    font-size: 1.5rem;
     padding: 1rem;
     text-align: center;
     display: grid;

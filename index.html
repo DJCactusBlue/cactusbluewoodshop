@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" type="text/css" href="styles_woodshop_main.css">
-  <script src="name.js" defer></script>
+  
   <title>Cactus Blue Woodshop</title>
 
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -30,7 +30,7 @@
 
 <body>
 
-  <div class="container-underneath"> <!--Add a white background container beneath container-->
+  <div class="body-container"> <!--body-container contains max-width-->
 
   <!--Header includes banner, overlapping primary navigation menu, and project title-->
   <header>
@@ -56,133 +56,99 @@
     <nav class="sidebar"> <!--Sidebar navigation links-->
       <a class="active" href="index.html">Pens & Pencils</a>
       <a href="Bottle_Stopper.html">Bottle Stoppers</a>
+      <a href="Bowls">Bowls</a>
+      <a href="Magifying_Glass">Magnifying Glass</a>
+      <a href="Cutting_Boards">Cutting Boards</a>
       <a href="Corner_Hutch">Corner Hutch</a>
       <a href="Race_Car_Bed">Race Car Bed</a>
       <a href="Benches">Benches</a>
       <a href="Toy_Box">Toy Box</a>
       <a href="Birdhouse">Birdhouse</a>
       <a href="Train_Table">Train Table</a>
-      <a href="Toddler_Size_Table_Chairs">Toddler Size Table & Chairs</a>
+      <a href="Child_Table_and_Chairs">Child Table & Chairs</a>
       <a href="Toddler_Play_Guitar">Toddler Play Guitar</a>
       <a href="Toy_Box">Toy Box</a>
       <a href="Early_Projects">Early Projects</a>
       <a href="The_Woodshop">The Woodshop</a>
     </nav> 
 
-    <label for="side-toggle" class="side-toggle-label"> <!--Replaces checkbox for toggle of menu-->
-      <span></span>
-    </label>
+    <!--Descriptive text on above the images-->
+    <section class="text-above-images">
+      <h2>Pens & Pencils</h2>
+        <p>Text describing images goes here. Text describing images goes here. Text describing images goes here. Text describing images goes here. Text describing images goes here. </p>
+     </section>
 
-    <!-- Slideshow container -->
-    <figure class="slideshow-container">
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides">
-        <div class="numbertext">1 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Executive_Rollerball1.jpeg">
-        <figcaption>Executive Rollerball</figcaption>
-      </div>
+    <!-- Cards with images and caption text -->
+    <div class="card">
+      <img src="Pens_Pencils/Executive_Rollerball1.jpeg" class="card-img">
+        <figcaption>Executive Rollerball 1</figcaption>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">2 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Executive_Rollerball2.jpeg">
-        <figcaption>Executive Rollerball</figcaption>
-      </div>
+    <div class="card">
+      <img src="Pens_Pencils/Executive_Rollerball2.jpeg" class="card-img">
+        <figcaption>Executive Rollerball 2</figcaption>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">3 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Executive_Rollerball3.jpeg">
-        <figcaption>Executive Rollerball</figcaption>
-      </div>
+    <div class="card">
+      <img src="Pens_Pencils/Executive_Rollerball3.jpeg" class="card-img">       
+        <figcaption>Executive Rollerball 3</figcaption>        
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">7 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Executive_Fountain_Magnetic1.jpeg">
+    <div class="card">
+      <img src="Pens_Pencils/Executive_Fountain_Magnetic1.jpeg" class="card-img">
         <figcaption>Executive Fountain</figcaption>
-      </div>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">9 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Executive_Fountain_Magnetic3.jpeg">
+    <div class="card">
+      <img src="Pens_Pencils/Executive_Fountain_Magnetic3.jpeg" class="card-img">
         <figcaption>Executive Fountain</figcaption>
-      </div>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">11 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Wall_Street_III.jpeg">
+    <div class="card">
+      <img src="Pens_Pencils/Wall_Street_III.jpeg" class="card-img">
         <figcaption>Wall Street II & III</figcaption>
-      </div>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">12 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Euro_Style1.jpeg">
+    <div class="card">
+      <img src="Pens_Pencils/Euro_Style1.jpeg" class="card-img">
         <figcaption>Euro Style</figcaption>
-      </div>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">14 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Euro_Style2.jpeg">
+    <div class="card">
+      <img src="Pens_Pencils/Euro_Style2.jpeg" class="card-img">
         <figcaption>Euro Style</figcaption>
-      </div>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">14 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Euro_Style3.jpeg">
+    <div class="card">
+      <img src="Pens_Pencils/Euro_Style3.jpeg" class="card-img">
         <figcaption>Euro Style</figcaption>
-      </div>
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">13 / 14</div>
-        <img class="slide-img" src="Pens_Pencils/Slim_Style_Pens.jpeg">
+    <div class="card">
+      <img src="Pens_Pencils/Slim_Style_Pens.jpeg" class="card-img">
         <figcaption>Slim Style</figcaption>
-      </div>
+    </div>
 
-      <!-- Next and previous arrows -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(14)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
-        <span class="dot" onclick="currentSlide(12)"></span>
-        <span class="dot" onclick="currentSlide(13)"></span>
-        <span class="dot" onclick="currentSlide(14)"></span>
-      </div>
-    </figure>
+  </div> <!--grid-container-middle-->
 
-    <!--Descriptive text on right side of images-->
-    <section class="text-next-image">
-    <h2>Pens & Pencils</h2>
-      <p>Text describing images goes here. Text describing images goes here. Text describing images goes here. Text describing images goes here. Text describing images goes here. </p>
-    </section>
-  </div>
-
-    <!--Whitespace before the footer-->
-    <div class="grid-container-bottom">
-      <div class="whitespace">
-      </div>
+  <!--Whitespace before the footer-->
+  <div class="grid-container-bottom">
+    <div class="whitespace">
+    </div>
+  
+    <!--Footer first row (or right-side) social icons-->
+    <div class="footer-social-icons">
+      <a href="https://www.instagram.com/djcactusblue/"><img class="social-icon-size" src="insta-logo-white-may2016.png" alt="instagram"></a>
+      <a href="https://twitter.com/DJCactusBlue"><img class="social-icon-size" src="2021Twitter-logo-white.png" alt="twitter"></a>
+      <a href="https://flickr.com/photos/cactusblue/"><img class="social-icon-size" src="flickr-icon-white.png" alt="flickr"></a>
+    </div>
     
-    <!--Footer-->
-      <div class="footer-social-icons">
-        <a href="https://www.instagram.com/djcactusblue/"><img class="social-icon-size" src="insta-logo-white-may2016.png" alt="instagram"></a>
-        <a href="https://twitter.com/DJCactusBlue"><img class="social-icon-size" src="2021Twitter-logo-white.png" alt="twitter"></a>
-        <a href="https://flickr.com/photos/cactusblue/"><img class="social-icon-size" src="flickr-icon-white.png" alt="flickr"></a>
-      </div>
-    
-      <div class="footer-copyright">
-        <p>© 2022 Cactus Blue Woodshop. All Rights Reserved.</p>
-      </div>
-    </div> 
+    <!--Footer second row (or left-side) compyright information-->
+    <div class="footer-copyright">
+      <p>© 2022 Cactus Blue Woodshop. All Rights Reserved.</p>
+    </div>
+  </div> <!--grid-container-bottom-->
 
-  </div> <!--Container underneath-->
+  </div> <!--body-container-->
 </body>
 </html>
