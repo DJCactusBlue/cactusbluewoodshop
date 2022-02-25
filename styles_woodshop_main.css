@@ -252,14 +252,28 @@ header {
 }
 
 /* Set the properties of cards, images and captions */
+/* Portrait aspect ratio */
 .card {
   margin: 1.2rem;
-  aspect-ratio: 1 / 1.5;
+  aspect-ratio: 1/1.5;
 }
 
 .card-img {
   width: 100%;
   aspect-ratio: 1/1.5;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Landscape aspect ratio */
+.card-landscape {
+  margin: 1.2rem;
+  aspect-ratio: 1.5/1;
+}
+
+.card-img-landscape {
+  width: 100%;
+  aspect-ratio: 1.5/1;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
@@ -385,6 +399,11 @@ figcaption {
   /* Make the sidebar even smaller horizontally */
   .sidebar {
     width: 150px;
+    height: 625px;
+  }
+
+  .sidebar a {
+    padding: .75rem 1.2rem;
   }
 
   /**********************
